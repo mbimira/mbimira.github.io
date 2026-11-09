@@ -1,87 +1,2093 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Michael Bimira is a Data Analyst and Applied AI Generalist focused on analytics, healthcare operations, intelligent systems, and workflow orchestration.">
-  <meta property="og:title" content="Michael Bimira — Data Analytics &amp; Applied AI">
-  <meta property="og:description" content="Turning operational data into actionable insights, dashboards, and intelligent workflows.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mbimira.github.io/">
-  <meta name="theme-color" content="#fbfaf6">
-  <title>Michael Bimira — Data Analytics &amp; Applied AI</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="css/contact-dialog.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Michael Bimira | Data · Analytics · AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    :root{color-scheme:light;--ink:#172b3b;--blue:#176b87;--blue-dark:#0e4e67;--paper:#fbfaf6;--white:#fff;--muted:#596b75;--line:#d9e1df;--lime:#dceca8;--coral:#ed765a;--soft:#f1f2eb;--projects:#f0f3f1;--art:#d9e8e4;--art-warm:#efe2d2;--art-cool:#e0e7eb;--max:1160px}
-    [data-theme="dark"]{color-scheme:dark;--ink:#ecf2f0;--blue:#78c8df;--blue-dark:#a0deed;--paper:#111c25;--white:#192833;--muted:#b0c0c4;--line:#334650;--lime:#354632;--coral:#ff9474;--soft:#1a2a33;--projects:#15242d;--art:#263d45;--art-warm:#41342e;--art-cool:#283740}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
-    header{background:var(--paper);border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}.wordmark{display:flex;align-items:center;gap:12px;font-size:.95rem;font-weight:800;letter-spacing:-.02em}.mark{display:grid;place-items:center;width:39px;height:39px;background:var(--blue);color:white;font-weight:850;font-size:.82rem;letter-spacing:-.08em;border-radius:50%}.wordmark small{display:block;color:var(--muted);font-size:.66rem;font-weight:650;letter-spacing:.13em;text-transform:uppercase}.links{display:flex;align-items:center;gap:32px;font-weight:600;font-size:.87rem}.links a:hover{color:var(--blue)}.nav-cta{background:var(--blue);color:white;border-radius:3px;padding:11px 18px}.nav-cta:hover{background:var(--blue-dark);color:#fff}.theme-toggle{border:1px solid var(--line);border-radius:3px;background:var(--white);color:var(--ink);padding:9px 12px;font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}.theme-toggle:hover{border-color:var(--blue);color:var(--blue)}
-    .hero{padding:84px 0 74px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.13fr .87fr;gap:64px;align-items:center}.eyebrow,.section-label{display:flex;align-items:center;gap:11px;color:var(--blue);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.72rem}.eyebrow:before,.section-label:before{content:"";width:27px;height:2px;background:var(--coral)}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(3.2rem,6.4vw,5.8rem);line-height:.98;letter-spacing:-.065em;margin:19px 0 24px;max-width:720px}h1 em{font-style:normal;color:var(--blue)}.intro{max-width:560px;color:var(--muted);font-size:1.08rem;line-height:1.75}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:29px}.button{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border:1px solid var(--blue);border-radius:3px;color:var(--blue);font-size:.88rem;font-weight:750}.button.fill{background:var(--blue);color:#fff}.button.fill:hover{background:var(--blue-dark)}.button:hover{background:#eaf1ee}.hero-art{position:relative;min-height:370px;background:var(--lime);padding:35px;display:flex;align-items:flex-end;overflow:hidden}.hero-art:before{content:"";position:absolute;width:320px;height:320px;border:1px solid rgba(23,43,59,.22);border-radius:50%;right:-63px;top:-90px;box-shadow:0 0 0 35px rgba(255,255,255,.18),0 0 0 70px rgba(255,255,255,.15)}.chart{position:absolute;inset:54px 48px 90px;display:flex;align-items:flex-end;gap:12px;border-bottom:1px solid rgba(23,43,59,.3);padding:0 0 0 18px}.chart i{display:block;flex:1;background:var(--blue);opacity:.91;min-height:22%;border-radius:2px 2px 0 0}.chart i:nth-child(1){height:32%}.chart i:nth-child(2){height:48%}.chart i:nth-child(3){height:40%}.chart i:nth-child(4){height:66%}.chart i:nth-child(5){height:57%}.chart i:nth-child(6){height:82%}.chart i:nth-child(7){height:72%}.chart i:nth-child(8){height:100%;background:var(--coral)}.art-caption{z-index:1;background:var(--paper);padding:15px 17px;width:100%;font-size:.83rem;font-weight:750}.art-caption span{display:block;color:var(--muted);font-size:.72rem;font-weight:500}
-    .proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--soft)}.proof-row{display:grid;grid-template-columns:repeat(3,1fr);padding:24px 0}.proof-item{padding:2px 28px;border-right:1px solid var(--line)}.proof-item:first-child{padding-left:0}.proof-item:last-child{border:0}.proof-item strong{display:block;font-size:1.1rem;letter-spacing:-.02em}.proof-item span{font-size:.82rem;color:var(--muted)}
-    section.block{padding:84px 0}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:34px}.section-head h2{font-size:clamp(2rem,3.5vw,3.1rem);line-height:1.05;letter-spacing:-.055em;margin:10px 0 0}.section-head p{color:var(--muted);max-width:410px;margin:0}.projects{background:var(--projects)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--white);border:1px solid var(--line);min-height:100%;display:flex;flex-direction:column}.card-visual{height:160px;background:var(--art);position:relative;overflow:hidden;padding:18px}.card-visual.concrete{background:var(--art-warm)}.card-visual.auto{background:var(--art-cool)}.visual-label{display:inline-block;position:relative;z-index:1;background:rgba(255,255,255,.8);padding:5px 9px;text-transform:uppercase;font-weight:800;font-size:.66rem;letter-spacing:.11em}.card-visual .project-artwork{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.mini-bars{position:absolute;left:22px;right:22px;bottom:20px;height:72px;display:flex;align-items:flex-end;gap:7px}.mini-bars i{flex:1;background:var(--blue);height:35%;border-radius:2px 2px 0 0}.mini-bars i:nth-child(2n){height:65%}.mini-bars i:nth-child(3n){height:92%;background:var(--coral)}.scatter{position:absolute;inset:30px 35px;background:radial-gradient(circle at 20% 68%,var(--blue) 0 4px,transparent 5px),radial-gradient(circle at 34% 41%,var(--coral) 0 4px,transparent 5px),radial-gradient(circle at 52% 63%,var(--blue) 0 4px,transparent 5px),radial-gradient(circle at 64% 25%,var(--coral) 0 4px,transparent 5px),radial-gradient(circle at 82% 42%,var(--blue) 0 4px,transparent 5px),radial-gradient(circle at 45% 80%,var(--blue) 0 4px,transparent 5px);border-bottom:1px solid #9aaab0;border-left:1px solid #9aaab0}.card-body{padding:23px;display:flex;flex:1;flex-direction:column}.tag{font-size:.68rem;color:var(--blue);font-weight:850;letter-spacing:.13em;text-transform:uppercase}.card h3{font-size:1.26rem;line-height:1.25;letter-spacing:-.035em;margin:9px 0}.card p{color:var(--muted);font-size:.9rem;line-height:1.65;margin-bottom:19px}.card a{margin-top:auto;color:var(--blue);font-weight:800;font-size:.84rem}.card a span{padding-left:5px}.metric{font-size:1.3rem;font-weight:850;color:var(--ink);margin:0 0 10px}.metric small{display:block;font-size:.71rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
-    .about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:72px;align-items:start}.about-grid h2{font-size:clamp(2.2rem,4vw,3.5rem);letter-spacing:-.06em;line-height:1.03;margin:14px 0}.about-copy{font-size:1.04rem;color:var(--muted);max-width:660px}.skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}.skills span{border:1px solid var(--line);padding:6px 11px;font-size:.75rem;font-weight:700;background:#fff}
-    .contact{background:var(--ink);color:white;padding:62px 0}.contact-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}.contact h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.06em;line-height:1.05;margin:10px 0}.contact p{color:#c5d0d0;margin:0}.contact .section-label{color:var(--lime)}.contact .section-label:before{background:var(--coral)}.contact-links{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.contact .button{color:white;border-color:var(--lime);white-space:nowrap}.contact .button:hover{background:var(--blue)}.social-link{display:grid;place-items:center;width:46px;height:46px;border:1px solid #8a9ba1;border-radius:3px;color:#fff}.social-link:hover{border-color:var(--lime);background:var(--blue)}.social-link svg{width:21px;height:21px;fill:currentColor}.social-link.linkedin svg{width:19px;height:19px}.social-link:focus-visible,.contact .button:focus-visible,.theme-toggle:focus-visible{outline:3px solid var(--coral);outline-offset:3px}footer{padding:24px 0;color:var(--muted);font-size:.78rem}.footer-inner{display:flex;justify-content:space-between;gap:20px}
-    @media(max-width:800px){.hero-grid{grid-template-columns:1fr;gap:40px}.hero-art{min-height:300px}.cards{grid-template-columns:1fr 1fr}.card:last-child{grid-column:1/-1}.about-grid{grid-template-columns:1fr;gap:22px}.section-head{align-items:flex-start;flex-direction:column}.links{gap:16px}.links a:nth-child(3){display:none}}
-    @media(max-width:560px){.wrap{width:min(100% - 32px,var(--max))}.nav{height:67px}.wordmark{font-size:.84rem}.links{gap:13px;font-size:.78rem}.links a:nth-child(2){display:none}.nav-cta{padding:9px 12px}.hero{padding:61px 0 50px}h1{font-size:3.45rem}.hero-art{min-height:260px;padding:20px}.chart{inset:40px 34px 77px}.proof-row{grid-template-columns:1fr;padding:14px 0}.proof-item,.proof-item:first-child{padding:12px 0;border-right:0;border-bottom:1px solid var(--line)}.proof-item:last-child{border-bottom:0}.proof-item strong{display:inline-block;margin-right:6px}.proof-item span{display:inline}.block{padding:62px 0!important}.cards{grid-template-columns:1fr}.card:last-child{grid-column:auto}.contact-inner{align-items:flex-start;flex-direction:column}.footer-inner{flex-direction:column}}
-    .hero{background:linear-gradient(90deg,rgba(10,24,34,.91) 0%,rgba(10,24,34,.78) 47%,rgba(10,24,34,.34) 100%),url("images/hero-mikeai.jpeg") center 48%/cover no-repeat;padding:64px 0;border:0;color:#fff}.hero-grid{display:flex;min-height:610px;align-items:center}.hero-grid>div:first-child{position:relative;z-index:1;max-width:610px}.hero-art{display:none}.hero .eyebrow{color:#e1edb6}.hero h1{font-size:clamp(2.8rem,5vw,4.6rem);color:#fff}.hero h1 em{color:#dceca8}.hero .intro{color:#edf1f1}.hero .button:not(.fill){color:#fff;border-color:rgba(255,255,255,.75)}
-    @media(max-width:800px){.hero{background-position:58% center}.hero-grid{min-height:620px}.hero-grid>div:first-child{max-width:560px}}
-    @media(max-width:560px){.hero{background-image:linear-gradient(90deg,rgba(10,24,34,.88),rgba(10,24,34,.66)),url("images/hero-mikeai.jpeg");background-position:60% center;padding:52px 0}.hero-grid{min-height:640px}.hero h1{font-size:clamp(2.55rem,12vw,3.35rem)}}
-    .hero{background:#0a1822;padding:64px 0;color:#fff}.hero-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:30px;min-height:610px;align-items:center}.hero-grid>div:first-child{max-width:610px}.hero h1{font-size:clamp(2.8rem,4vw,3.7rem)}.hero-photo{display:flex;align-items:center;justify-content:center;height:min(500px,60vh);min-height:380px;overflow:hidden}.hero-photo img{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:84% 38%}.hero-art{display:none}
-    @media(max-width:800px){.hero-grid{grid-template-columns:1fr;min-height:0;gap:36px}.hero-grid>div:first-child{max-width:650px}.hero-photo{height:58vh;min-height:380px}.hero-photo img{object-position:84% 38%}}
-    @media(max-width:560px){.hero{padding:52px 0}.hero-photo{height:54vh;min-height:320px}}
-    .hero-photo{height:auto;min-height:0;overflow:visible}.hero-photo img{width:100%;height:auto;max-width:100%;max-height:none;object-fit:contain;object-position:center}
-    @media(max-width:800px){.hero-photo{height:auto;min-height:0}.hero-photo img{width:100%;max-height:none}}
-    .nav-socials{display:flex;align-items:center;gap:7px}.nav-social{display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--line);border-radius:3px;color:var(--muted);transition:color .18s,border-color .18s,background .18s}.nav-social:hover{color:var(--blue);border-color:var(--blue);background:var(--soft)}.nav-social svg{width:16px;height:16px;fill:currentColor}.nav-social:focus-visible{outline:3px solid var(--coral);outline-offset:3px}.links .nav-socials a:nth-child(n){display:grid}
-    .nav-socials .nav-social:nth-child(1){color:#14728b;background:#e9f4f5;border-color:#b6d8de}.nav-socials .nav-social:nth-child(2){color:#0a66c2;background:#eaf3fc;border-color:#c3d9f0}.nav-socials .nav-social:nth-child(3){color:#24292f;background:#edf0f2;border-color:#ced4da}.nav-socials .nav-social:hover{filter:brightness(.95);transform:translateY(-1px)}[data-theme="dark"] .nav-socials .nav-social:nth-child(1){color:#78d5e7;background:#18333c;border-color:#315660}[data-theme="dark"] .nav-socials .nav-social:nth-child(2){color:#70b7ff;background:#172e45;border-color:#2a4c6a}[data-theme="dark"] .nav-socials .nav-social:nth-child(3){color:#f0f6fc;background:#29343e;border-color:#43515c}
-    @media(max-width:800px){.nav{gap:14px}.links{gap:13px}}
-    @media(max-width:560px){.nav{gap:8px}.links{gap:7px}.links>a:not(.nav-social){display:none}.nav-socials{gap:4px}.nav-social{width:30px;height:30px}.theme-toggle{padding:7px 8px;white-space:nowrap}.theme-toggle span{display:none}.wordmark small{white-space:nowrap}.nav-cta{display:none}}
-    .hero{position:relative;background:linear-gradient(90deg,rgba(10,24,34,.9) 0%,rgba(10,24,34,.76) 42%,rgba(10,24,34,.16) 100%),url("images/hero-mikeai.jpeg") center 23%/cover no-repeat;padding:42px 0;color:#fff}.hero-grid{display:flex;min-height:520px;align-items:center}.hero-grid>div:first-child{max-width:550px;margin-left:clamp(0px,10vw,210px)}.hero h1{font-size:clamp(2.7rem,3.4vw,3.8rem);line-height:1.02}.hero .intro{font-size:.96rem;line-height:1.55}.hero-photo{display:none}
-    @media(max-width:800px){.hero{background-position:62% 23%}.hero-grid{min-height:560px}.hero-grid>div:first-child{margin-left:0;max-width:590px}}
-    @media(max-width:560px){.hero{background-image:linear-gradient(90deg,rgba(10,24,34,.9),rgba(10,24,34,.65)),url("images/hero-mikeai.jpeg");background-position:68% 23%;padding:42px 0}.hero-grid{min-height:600px}.hero h1{font-size:clamp(2.7rem,11vw,3.5rem)}}
+    /* --- ORIGINAL DESIGN SYSTEM VARIABLES (FOR BODY BELOW HERO) --- */
+    :root {
+      color-scheme: light;
+      --ink: #172b3b;
+      --blue: #176b87;
+      --blue-dark: #0e4e67;
+      --paper: #fbfaf6;
+      --white: #fff;
+      --muted: #596b75;
+      --line: #d9e1df;
+      --lime: #dceca8;
+      --coral: #ed765a;
+      --soft: #f1f2eb;
+      --projects: #f0f3f1;
+      --art: #d9e8e4;
+      --art-warm: #efe2d2;
+      --art-cool: #e0e7eb;
+      --max: 1160px;
+
+      /* Top Header & Hero Variables */
+      --bg-header: rgba(251, 250, 246, 0.92);
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --accent-coral: #E05A47;
+      --accent-teal: #0D6E6E;
+      --accent-teal-hover: #095252;
+      --border-light: #E2E8F0;
+      --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-display: 'Space Grotesk', 'Inter', sans-serif;
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --ink: #ecf2f0;
+      --blue: #78c8df;
+      --blue-dark: #a0deed;
+      --paper: #111c25;
+      --white: #192833;
+      --muted: #b0c0c4;
+      --line: #334650;
+      --lime: #354632;
+      --coral: #ff9474;
+      --soft: #1a2a33;
+      --projects: #15242d;
+      --art: #263d45;
+      --art-warm: #41342e;
+      --art-cool: #283740;
+
+      /* Top Header Dark Variables */
+      --bg-header: rgba(17, 28, 37, 0.92);
+      --text-primary: #F8FAFC;
+      --text-secondary: #CBD5E1;
+      --text-muted: #94A3B8;
+      --accent-coral: #F97316;
+      --accent-teal: #14B8A6;
+      --accent-teal-hover: #0D9488;
+      --border-light: #334650;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.65 var(--font-sans);
+      transition: background-color 0.25s ease, color 0.25s ease;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    /* =========================================================================
+       TOP PART: STICKY HEADER + FULL-WIDTH NIGHT SKY CITY HERO
+       ========================================================================= */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-header);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      cursor: pointer;
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0D6E6E, #06B6D4);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.04em;
+      box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    .brand-sub {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 0.25rem 0;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent-teal);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--border-light);
+      background: var(--white);
+      color: var(--text-secondary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .icon-btn:hover {
+      border-color: var(--accent-teal);
+      color: var(--accent-teal);
+      transform: translateY(-1px);
+    }
+
+    .theme-btn {
+      padding: 0 0.85rem;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--border-light);
+      background: var(--white);
+      color: var(--text-secondary);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .theme-btn:hover {
+      border-color: var(--accent-teal);
+      color: var(--accent-teal);
+    }
+
+    .resume-btn {
+      padding: 0 1rem;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--accent-teal);
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .resume-btn:hover {
+      background: var(--accent-teal-hover);
+      transform: translateY(-1px);
+    }
+
+    /* --- FULL-WIDTH DARK CITY SKYLINE & SLOW CONNECTED STARS HERO --- */
+    .hero-wrapper {
+      position: relative;
+      width: 100%;
+      min-height: 620px;
+      background: radial-gradient(ellipse at 70% 35%, #0B253A 0%, #061320 55%, #030911 100%);
+      color: #FFFFFF;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(6, 182, 212, 0.25);
+    }
+
+    #cityDataCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: auto;
+    }
+
+    .hero-glow-overlay {
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.14) 0%, transparent 55%),
+        radial-gradient(circle at 20% 80%, rgba(224, 90, 71, 0.10) 0%, transparent 50%),
+        linear-gradient(90deg, rgba(3, 9, 17, 0.92) 0%, rgba(3, 9, 17, 0.72) 52%, rgba(3, 9, 17, 0.25) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 3;
+      max-width: 1240px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 5rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3rem;
+      align-items: center;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      pointer-events: auto;
+    }
+
+    .eyebrow-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .eyebrow-line {
+      width: 28px;
+      height: 2px;
+      background: var(--accent-coral);
+      display: inline-block;
+    }
+
+    .eyebrow-text {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #38BDF8;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.5vw, 3.85rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      color: #FFFFFF;
+    }
+
+    .hero-title span.highlight-gradient {
+      background: linear-gradient(90deg, #38BDF8 0%, #2DD4BF 55%, #F97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-bio {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: rgba(241, 245, 249, 0.88);
+      max-width: 650px;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn-primary-hero {
+      padding: 0.9rem 1.65rem;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #0D9488 0%, #0284C7 100%);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 8px 24px rgba(6, 182, 212, 0.35);
+      transition: all 0.25s ease;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-primary-hero:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(6, 182, 212, 0.5);
+    }
+
+    .btn-secondary-hero {
+      padding: 0.9rem 1.65rem;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.25s ease;
+    }
+
+    .btn-secondary-hero:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: #38BDF8;
+      transform: translateY(-2px);
+    }
+
+    /* Right Column Live Telemetry HUD Card */
+    .hero-telemetry-hud {
+      pointer-events: auto;
+      justify-self: end;
+      background: rgba(10, 22, 36, 0.62);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      border-radius: 16px;
+      padding: 1.35rem 1.5rem;
+      width: 100%;
+      max-width: 370px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .hud-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 0.85rem;
+      margin-bottom: 0.95rem;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    .hud-status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #2DD4BF;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #2DD4BF;
+      box-shadow: 0 0 10px #2DD4BF;
+      animation: pulseGlow 1.8s infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.55; }
+    }
+
+    .hud-city-label {
+      font-size: 0.72rem;
+      color: #94A3B8;
+      font-family: monospace;
+    }
+
+    .hud-stream-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .hud-stream-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      padding: 0.5rem 0.65rem;
+      border-radius: 8px;
+      background: rgba(15, 23, 42, 0.55);
+      border-left: 3px solid #38BDF8;
+    }
+
+    .hud-stream-item.coral {
+      border-left-color: #F97316;
+    }
+
+    .hud-stream-item.teal {
+      border-left-color: #2DD4BF;
+    }
+
+    .hud-node-name {
+      color: #E2E8F0;
+      font-weight: 600;
+    }
+
+    .hud-node-val {
+      color: #38BDF8;
+      font-family: monospace;
+      font-weight: 700;
+    }
+
+    .hud-footer-hint {
+      margin-top: 0.9rem;
+      font-size: 0.72rem;
+      color: #94A3B8;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    /* =========================================================================
+       REST OF SITE: YOUR EXACT ORIGINAL DESIGN (PROOF, PROJECTS, ABOUT, CONTACT)
+       ========================================================================= */
+    .wrap {
+      width: min(var(--max), calc(100% - 48px));
+      margin: auto;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--blue);
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-size: .72rem;
+    }
+
+    .section-label:before {
+      content: "";
+      width: 27px;
+      height: 2px;
+      background: var(--coral);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 19px;
+      border: 1px solid var(--blue);
+      border-radius: 3px;
+      color: var(--blue);
+      font-size: .88rem;
+      font-weight: 750;
+      cursor: pointer;
+      background: transparent;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .button.fill {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .button.fill:hover {
+      background: var(--blue-dark);
+    }
+
+    .button:hover {
+      background: #eaf1ee;
+    }
+
+    [data-theme="dark"] .button:hover {
+      background: rgba(120, 200, 223, 0.14);
+    }
+
+    /* --- PROOF ROW --- */
+    .proof {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--soft);
+    }
+
+    .proof-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 24px 0;
+    }
+
+    .proof-item {
+      padding: 2px 28px;
+      border-right: 1px solid var(--line);
+    }
+
+    .proof-item:first-child { padding-left: 0; }
+    .proof-item:last-child { border: 0; }
+    .proof-item strong { display: block; font-size: 1.1rem; letter-spacing: -.02em; }
+    .proof-item span { font-size: .82rem; color: var(--muted); }
+
+    /* --- SELECTED WORK SECTION (#work) WITH ORIGINAL PICTURES --- */
+    section.block { padding: 84px 0; }
+    .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 34px; }
+    .section-head h2 { font-size: clamp(2rem, 3.5vw, 3.1rem); line-height: 1.05; letter-spacing: -.055em; margin: 10px 0 0; }
+    .section-head p { color: var(--muted); max-width: 410px; margin: 0; }
+
+    .projects { background: var(--projects); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: var(--white); border: 1px solid var(--line); min-height: 100%; display: flex; flex-direction: column; }
+    .card-visual { height: 160px; background: var(--art); position: relative; overflow: hidden; padding: 18px; }
+    .card-visual.concrete { background: var(--art-warm); }
+    .card-visual.auto { background: var(--art-cool); }
+    .visual-label { display: inline-block; position: relative; z-index: 1; background: rgba(255, 255, 255, .85); color: #172b3b; padding: 5px 9px; text-transform: uppercase; font-weight: 800; font-size: .66rem; letter-spacing: .11em; }
+    .card-visual .project-artwork { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+    .card-body { padding: 23px; display: flex; flex: 1; flex-direction: column; }
+    .tag { font-size: .68rem; color: var(--blue); font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+    .card h3 { font-size: 1.26rem; line-height: 1.25; letter-spacing: -.035em; margin: 9px 0; }
+    .card p { color: var(--muted); font-size: .9rem; line-height: 1.65; margin-bottom: 19px; }
+    .card a { margin-top: auto; color: var(--blue); font-weight: 800; font-size: .84rem; }
+    .card a:hover { color: var(--coral); }
+    .card a span { padding-left: 5px; }
+
+    .metric { font-size: 1.3rem; font-weight: 850; color: var(--ink); margin: 0 0 10px; }
+    .metric small { display: block; font-size: .71rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+
+    /* --- ABOUT ME SECTION (#about) --- */
+    .about-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 72px; align-items: start; }
+    .about-grid h2 { font-size: clamp(2.2rem, 4vw, 3.5rem); letter-spacing: -.06em; line-height: 1.05; margin: 10px 0 0; }
+    .skills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 24px; }
+    .skills span { border: 1px solid var(--line); padding: 6px 11px; font-size: .75rem; font-weight: 700; background: var(--white); color: var(--ink); }
+
+    /* --- ORIGINAL GET IN TOUCH SECTION (#contact) & FOOTER --- */
+    .contact { background: #172b3b; color: white; padding: 62px 0; }
+    .contact h2 { font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -.06em; line-height: 1.05; margin: 8px 0 10px; }
+    .contact p { color: #c5d0d0; margin: 0; }
+    .contact .section-label { color: #dceca8; }
+    .contact .section-label:before { background: #ed765a; }
+    .contact .button { color: white; border-color: #dceca8; white-space: nowrap; }
+    .contact .button:hover { background: #176b87; border-color: #176b87; color: white; }
+    .contact .button:focus-visible { outline: 3px solid #ed765a; outline-offset: 3px; }
+    .contact-inner { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
+    .contact-links { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+
+    .social-link { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid #8a9ba1; border-radius: 3px; color: #fff; transition: background 0.2s ease, border-color 0.2s ease; }
+    .social-link:hover { border-color: #dceca8; background: #176b87; }
+    .social-link svg { width: 21px; height: 21px; fill: currentColor; }
+    .social-link.linkedin svg { width: 19px; height: 19px; }
+    .social-link:focus-visible { outline: 3px solid #ed765a; outline-offset: 3px; }
+
+    footer { padding: 24px 0; color: var(--muted); font-size: .78rem; border-top: 1px solid var(--line); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
+    .footer-links a:hover { color: var(--blue); }
+
+    /* =========================================================================
+       EXECUTIVE REDESIGNED RESUME VIEW (BUILT-IN & STANDALONE READY)
+       ========================================================================= */
+    .resume-view-section {
+      display: none;
+      padding: 40px 0 80px;
+      background: var(--projects);
+      min-height: calc(100vh - 150px);
+    }
+
+    body.showing-resume #portfolioMain {
+      display: none;
+    }
+
+    body.showing-resume #resumeViewSection {
+      display: block;
+    }
+
+    .resume-toolbar {
+      max-width: 1020px;
+      margin: 0 auto 24px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .resume-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border-light);
+      background: var(--white);
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 0.86rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .resume-back-btn:hover {
+      border-color: var(--accent-teal);
+      color: var(--accent-teal);
+    }
+
+    .resume-toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .resume-action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      border: 1px solid var(--accent-teal);
+      background: var(--accent-teal);
+      color: #ffffff;
+      transition: all 0.2s ease;
+    }
+
+    .resume-action-btn:hover {
+      background: var(--accent-teal-hover);
+    }
+
+    .resume-action-btn.outline {
+      background: var(--white);
+      color: var(--accent-teal);
+    }
+
+    .resume-action-btn.outline:hover {
+      background: rgba(13, 110, 110, 0.08);
+    }
+
+    .resume-sheet {
+      max-width: 1020px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+    }
+
+    .resume-banner {
+      background: linear-gradient(135deg, #0B253A 0%, #132C3D 60%, #0D5C63 100%);
+      color: #ffffff;
+      padding: 40px 44px;
+      border-bottom: 3px solid var(--coral);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .resume-name {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 0 0 6px;
+      color: #ffffff;
+    }
+
+    .resume-role-title {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: #38BDF8;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .resume-contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 24px;
+      font-size: 0.88rem;
+      color: #E2E8F0;
+    }
+
+    .resume-contact-strip a,
+    .resume-contact-strip span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #E2E8F0;
+    }
+
+    .resume-contact-strip a:hover {
+      color: #38BDF8;
+    }
+
+    .resume-body-grid {
+      display: grid;
+      grid-template-columns: 1.85fr 1fr;
+      gap: 0;
+    }
+
+    .resume-main-col {
+      padding: 38px 44px;
+      border-right: 1px solid var(--line);
+    }
+
+    .resume-side-col {
+      padding: 38px 34px;
+      background: var(--paper);
+    }
+
+    .res-section {
+      margin-bottom: 32px;
+    }
+
+    .res-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .res-sec-title {
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .res-sec-title i {
+      color: var(--coral);
+    }
+
+    .res-summary-text {
+      font-size: 0.94rem;
+      line-height: 1.72;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .res-job {
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .res-job:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .res-job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .res-job-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .res-job-date {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--blue);
+      background: var(--projects);
+      padding: 3px 9px;
+      border-radius: 4px;
+    }
+
+    .res-job-org {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .res-bullets {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 0.89rem;
+      line-height: 1.65;
+      color: var(--ink);
+    }
+
+    .res-bullets li {
+      margin-bottom: 5px;
+    }
+
+    .res-proj-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .res-proj-card {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 14px 16px;
+      border-radius: 6px;
+    }
+
+    .res-proj-card h4 {
+      margin: 0 0 6px;
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .res-proj-card ul {
+      margin: 0;
+      padding-left: 16px;
+      font-size: 0.83rem;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .res-skill-group {
+      margin-bottom: 16px;
+    }
+
+    .res-skill-group strong {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .res-tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .res-tag {
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 4px 9px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      color: var(--ink);
+    }
+
+    .res-edu-item {
+      margin-bottom: 16px;
+    }
+
+    .res-edu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .res-edu-degree {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+
+    .res-edu-school {
+      font-size: 0.82rem;
+      color: var(--blue);
+      font-weight: 600;
+      margin: 2px 0 4px;
+    }
+
+    .res-edu-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .res-cert-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.84rem;
+      line-height: 1.55;
+    }
+
+    .res-cert-list li {
+      padding: 6px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .res-cert-list li:last-child {
+      border-bottom: none;
+    }
+
+    .res-cert-list i {
+      color: var(--accent-teal);
+      margin-top: 4px;
+      font-size: 0.78rem;
+    }
+
+    /* --- ORIGINAL CONTACT DIALOG MODAL --- */
+    .contact-dialog {
+      padding: 0;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink);
+      max-width: 480px;
+      width: calc(100% - 32px);
+      border-radius: 4px;
+    }
+    .contact-dialog::backdrop {
+      background: rgba(5, 16, 24, .76);
+    }
+    .contact-dialog form {
+      padding: 28px;
+    }
+    .contact-dialog .dialog-heading {
+      display: flex;
+      align-items: flex-start;
+    }
+    .contact-dialog h2 {
+      margin: 8px 0 20px;
+      font-size: 1.7rem;
+      line-height: 1.2;
+    }
+    .contact-dialog label {
+      display: grid;
+      gap: 6px;
+      margin: 0 0 15px;
+      font-size: .88rem;
+      font-weight: 600;
+    }
+    .contact-dialog input,
+    .contact-dialog textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      padding: 11px 12px;
+      background: var(--white);
+      color: var(--ink);
+      font: inherit;
+      font-size: .95rem;
+    }
+    .contact-dialog textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+    .contact-dialog input:focus,
+    .contact-dialog textarea:focus {
+      outline: 2px solid var(--blue);
+      outline-offset: 1px;
+    }
+    .contact-dialog .dialog-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .contact-dialog button.button {
+      font-family: inherit;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+    .contact-dialog button.button.fill {
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
+    }
+    .contact-dialog .dialog-close {
+      margin-left: auto;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 3px;
+      font-size: 1.1rem;
+    }
+    .contact-dialog .form-status {
+      min-height: 1.5em;
+      margin: 8px 0 0;
+      font-size: .88rem;
+    }
+    .contact-dialog .form-status[data-state="error"] { color: #c44735; }
+    .contact-dialog .form-status[data-state="success"] { color: #288250; }
+    .contact-dialog .contact-honeypot {
+      position: absolute;
+      left: -10000px;
+      visibility: hidden;
+    }
+
+    /* --- PRINT MEDIA FOR RESUME --- */
+    @media print {
+      .site-header, .resume-toolbar, footer, #portfolioMain {
+        display: none !important;
+      }
+      body, .resume-view-section, .resume-sheet {
+        display: block !important;
+        background: #ffffff !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+    }
+
+    /* --- RESPONSIVE BREAKPOINTS --- */
+    @media (max-width: 992px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        padding: 3.5rem 1.5rem 4rem 1.5rem;
+      }
+      .hero-telemetry-hud {
+        justify-self: start;
+        max-width: 100%;
+      }
+      .resume-body-grid {
+        grid-template-columns: 1fr;
+      }
+      .resume-main-col {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .nav-links { display: none; }
+      .cards { grid-template-columns: 1fr 1fr; }
+      .card:last-child { grid-column: 1 / -1; }
+      .about-grid { grid-template-columns: 1fr; gap: 22px; }
+      .section-head { align-items: flex-start; flex-direction: column; }
+      .res-proj-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 32px, var(--max)); }
+      .proof-row { grid-template-columns: 1fr; padding: 14px 0; }
+      .proof-item, .proof-item:first-child { padding: 12px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .proof-item:last-child { border-bottom: 0; }
+      .proof-item strong { display: inline-block; margin-right: 6px; }
+      .proof-item span { display: inline; }
+      .block { padding: 62px 0 !important; }
+      .cards { grid-template-columns: 1fr; }
+      .card:last-child { grid-column: auto; }
+      .contact-inner { align-items: flex-start; flex-direction: column; }
+      .footer-inner { flex-direction: column; }
+      .resume-banner, .resume-main-col, .resume-side-col { padding: 24px 20px; }
+    }
   </style>
 </head>
-<body>
-  <header><div class="wrap nav">
-    <a class="wordmark" href="#top"><span class="mark">MB</span><span>MICHAEL BIMIRA<small>Data · Analytics · AI</small></span></a>
-    <nav class="links" aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a><div class="nav-socials" aria-label="Contact and social links"><a class="nav-social" href="mailto:mikebimira@gmail.com" aria-label="Email Michael Bimira" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2 .1v.2l8 5.7 8-5.7v-.2a.5.5 0 0 0-.5-.5h-15a.5.5 0 0 0-.5.5Zm16 2.65-7.42 5.28a1 1 0 0 1-1.16 0L4 8.25v10.25c0 .28.22.5.5.5h15a.5.5 0 0 0 .5-.5V8.25Z"/></svg></a><a class="nav-social" href="https://linkedin.com/in/michael-bimira-77779a372" target="_blank" rel="noopener noreferrer" aria-label="Michael Bimira on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.3ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V8.99h3.56v11.46ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg></a><a class="nav-social" href="https://github.com/mbimira" target="_blank" rel="noopener noreferrer" aria-label="Michael Bimira on GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.32-3.76-1.32-.5-1.3-1.23-1.65-1.23-1.65-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.14 1.71 1.14 1 .1.99 1.58 3.05 1.2.1-.72.39-1.2.7-1.48-2.48-.28-5.08-1.24-5.08-5.5 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.06 1.14a10.62 10.62 0 0 1 5.57 0c2.13-1.44 3.06-1.14 3.06-1.14.61 1.54.23 2.68.12 2.96.71.78 1.14 1.77 1.14 2.99 0 4.27-2.6 5.21-5.09 5.49.4.34.75 1 .75 2.02v3c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg></a></div><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">☾ <span>Dark</span></button><a class="nav-cta" href="resume.html">Résumé ↗</a></nav>
-  </div></header>
-  <main id="top">
-    <section class="hero"><div class="wrap hero-grid">
-      <div><div class="eyebrow">Data analytics &amp; applied AI</div><h1>Data is everywhere.<br><em>I make it useful.</em></h1><p class="intro">I bring hands-on operational experience and data engineering together to build practical tools, explain complex patterns, and help teams make better decisions. By bridging complex operational environments with robust technical workflows using SQL, Python, Tableau, and Power BI, I transform intricate data into clear, automated insights and reliable reporting infrastructure. Beyond traditional analytics, I leverage my training in Artificial Intelligence in Business and ongoing leadership coursework in data analytics and visualization from Arizona State University to drive strategic experimentation, optimize operations, and scale high-impact, AI-driven solutions.</p><div class="actions"><a class="button fill" href="#work">Explore my work&nbsp; ↘</a><button class="button" type="button" data-open-contact>Let’s Connect&nbsp; ↗</button></div></div>
-      
-    </div></section>
-    <div class="proof"><div class="wrap proof-row"><div class="proof-item"><strong>Predictive modeling</strong><span>Concrete strength · R² 0.93</span></div><div class="proof-item"><strong>Unsupervised learning</strong><span>Automobile clusters · silhouette 0.416</span></div><div class="proof-item"><strong>Healthcare operations</strong><span>Staffing workflow application</span></div></div></div>
-    <section class="block projects" id="work"><div class="wrap"><div class="section-head"><div><div class="section-label">Selected work</div><h2>Proof in the projects.</h2></div><p>Real case studies that show the question, the method, and what the analysis found.</p></div>
-      <div class="cards">
-        <article class="card"><div class="card-visual concrete"><span class="visual-label">Predictive modeling</span><img class="project-artwork" src="images/predictive-model.jpg" alt="Abstract network of connected data points"></div><div class="card-body"><span class="tag">Data science · Python</span><h3>Predicting concrete strength</h3><div class="metric">R² 0.93 <small>Held-out UCI data</small></div><p>A tuned neural network estimates compressive strength from concrete mix proportions and curing age.</p><a href="projects/concrete-strength/index.html">Read the case study <span>→</span></a></div></article>
-        <article class="card"><div class="card-visual auto"><span class="visual-label">Pattern discovery</span><img class="project-artwork" src="images/pattern-discovery.png" alt="Keyword network showing related pattern discovery terms"></div><div class="card-body"><span class="tag">Machine learning · Python</span><h3>Finding groups in automobile data</h3><div class="metric">0.416 <small>Silhouette score · 3 clusters</small></div><p>Hierarchical clustering and PCA reveal meaningful groupings across 32 vehicle models.</p><a href="projects/automobile-clustering/index.html">Read the case study <span>→</span></a></div></article>
-        <article class="card"><div class="card-visual"><span class="visual-label">Applied software</span><img class="project-artwork" src="images/applied-software.webp" alt="Bar chart comparing city figures from seven locations"></div><div class="card-body"><span class="tag">Full stack · Healthcare</span><h3>Hospital staffing workflow</h3><p>A staffing application built to route shift schedules into a centralized database and support day-to-day operations.</p><a href="mailto:mikebimira@gmail.com?subject=Hospital%20staffing%20app">Ask about this project <span>→</span></a></div></article>
-        <article class="card"><div class="card-visual"><span class="visual-label">AI-assisted web design</span><img class="project-artwork" src="images/portfolio-site.svg" alt="Illustration of the Michael Bimira portfolio website"></div><div class="card-body"><span class="tag">Web design · AI collaboration</span><h3>Building my own portfolio</h3><p>I designed and built this portfolio with AI as a development partner, refining the layout, content, and features to present my analytics work. It includes responsive project showcases, a light/dark theme, and an n8n-powered contact form.</p><a href="https://mbimira.github.io/" target="_blank" rel="noopener noreferrer">View the live website <span>↗</span></a></div></article>
-        <article class="card"><div class="card-visual"><span class="visual-label">Landing page A/B test</span><img class="project-artwork" src="images/ab-test-conversion.svg" alt="Conversion rates: control 12.04%, treatment 11.88%; no significant difference"></div><div class="card-body"><span class="tag">Experimentation · Python · Educational data</span><h3>Did the new page change conversion?</h3><div class="metric">−0.16 pp <small>Treatment vs. control · p = 0.190</small></div><p>Using Udacity’s educational dataset, I removed group/page mismatches and compared one outcome per user. The result showed no statistically significant conversion difference.</p><a href="https://github.com/mbimira/A-B-TESTING" target="_blank" rel="noopener noreferrer">View the analysis and method <span>↗</span></a></div></article>
+<body id="top">
+
+  <!-- =======================================================================
+       TOP PART: STICKY HEADER + FULL-WIDTH INTERACTIVE NIGHT CITY HERO
+       ======================================================================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#top" class="brand-group" id="brandHomeLink">
+        <div class="brand-badge">MB</div>
+        <div class="brand-text">
+          <span class="brand-name">MICHAEL BIMIRA</span>
+          <span class="brand-sub">DATA · ANALYTICS · AI</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#work" class="js-portfolio-nav">Work</a></li>
+        <li><a href="#about" class="js-portfolio-nav">About</a></li>
+        <li><a href="#contact" class="js-portfolio-nav">Contact</a></li>
+        <li><a href="#resumeViewSection" id="navResumeTab">Résumé</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="mailto:mikebimira@gmail.com" class="icon-btn js-contact-open" title="Email Michael"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/michael-bimira-77779a372" target="_blank" rel="noopener noreferrer" class="icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/mbimira" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <button type="button" class="theme-btn" id="themeToggleBtn">
+          <i class="fa-regular fa-moon" id="themeIcon"></i>
+          <span id="themeLabel">Dark</span>
+        </button>
+        <button type="button" class="resume-btn" id="openResumeBtn">Résumé ↗</button>
       </div>
-    </div></section>
-    <section class="block" id="about"><div class="wrap about-grid"><div><div class="section-label">About Me</div><h2>Data Analytics, Applied AI &amp; Workflow Orchestration</h2></div><div class="about-copy"><p>I am a Data Analyst and Applied AI Generalist who bridges the gap between raw operational data and intelligent, automated systems. With a strong foundation in SQL, Python, Tableau, and Power BI—complemented by hands-on experience in complex healthcare environments—I specialize in transforming intricate datasets into clear, actionable business insights and high-impact dashboards.</p><p>Beyond traditional analytics, my training in Artificial Intelligence in Business from Arizona State University and workflow orchestration allows me to design modern, tech-forward solutions that automate workflows, streamline data pipelines, and drive smarter decision-making. Whether building interactive visual reports or architecting intelligent systems, I focus on turning complex data challenges into seamless, efficient operations.</p><div class="skills"><span>Python</span><span>SQL</span><span>Machine learning</span><span>React</span><span>TypeScript</span><span>Tableau</span><span>Power BI</span><span>Agentic AI</span></div></div></div></section>
-    <section class="contact" id="contact"><div class="wrap contact-inner"><div><div class="section-label">Get in touch</div><h2>Let’s make data useful.</h2><p>Open to conversations about analytics, applied AI, and healthcare operations.</p></div><div class="contact-links"><a class="button" href="mailto:mikebimira@gmail.com">mikebimira@gmail.com&nbsp; ↗</a><a class="social-link linkedin" href="https://linkedin.com/in/michael-bimira-77779a372" target="_blank" rel="noopener noreferrer" aria-label="Michael Bimira on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.3ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V8.99h3.56v11.46ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg></a><a class="social-link" href="https://github.com/mbimira" target="_blank" rel="noopener noreferrer" aria-label="Michael Bimira on GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.32-3.76-1.32-.5-1.3-1.23-1.65-1.23-1.65-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.14 1.71 1.14 1 .1.99 1.58 3.05 1.2.1-.72.39-1.2.7-1.48-2.48-.28-5.08-1.24-5.08-5.5 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.06 1.14a10.62 10.62 0 0 1 5.57 0c2.13-1.44 3.06-1.14 3.06-1.14.61 1.54.23 2.68.12 2.96.71.78 1.14 1.77 1.14 2.99 0 4.27-2.6 5.21-5.09 5.49.4.34.75 1 .75 2.02v3c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg></a></div></div></section>
+    </div>
+  </header>
+
+  <!-- =======================================================================
+       PORTFOLIO MAIN VIEW
+       ======================================================================= -->
+  <main id="portfolioMain">
+    <!-- FULL-WIDTH NIGHT SKY CITY & SLOW CONNECTED STARS HERO (NO FAST SHOOTING STARS) -->
+    <section class="hero-wrapper" id="heroSection">
+      <canvas id="cityDataCanvas"></canvas>
+      <div class="hero-glow-overlay"></div>
+
+      <div class="hero-container">
+        <!-- Left Column: Hero Headline & Bio -->
+        <div class="hero-content">
+          <div class="eyebrow-row">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-text">DATA ANALYTICS &amp; APPLIED AI</span>
+          </div>
+
+          <h1 class="hero-title">
+            Data is everywhere.<br />
+            <span class="highlight-gradient">I make it useful.</span>
+          </h1>
+
+          <p class="hero-bio">
+            I bring hands-on operational experience and data engineering together to build practical tools, explain complex patterns, and help teams make better decisions. By bridging complex operational environments with robust technical workflows using SQL, Python, Tableau, and Power BI, I transform intricate data into clear, automated insights and reliable reporting infrastructure. Beyond traditional analytics, I leverage my training in Artificial Intelligence in Business and ongoing leadership coursework in data analytics and visualization from Arizona State University to drive strategic experimentation, optimize operations, and scale high-impact, AI-driven solutions.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#work" class="btn-primary-hero">Explore my work ↘</a>
+            <a href="#contact" class="btn-secondary-hero js-contact-open">Let's Connect ↗</a>
+          </div>
+        </div>
+
+        <!-- Right Column: Live Urban Data Mesh Telemetry HUD -->
+        <div class="hero-telemetry-hud">
+          <div class="hud-header">
+            <div class="hud-status">
+              <span class="pulse-dot"></span>
+              <span>LIVE URBAN DATA MESH</span>
+            </div>
+            <span class="hud-city-label">PHX · NODE GRID</span>
+          </div>
+          <div class="hud-stream-list">
+            <div class="hud-stream-item">
+              <span class="hud-node-name">Predictive Neural Core</span>
+              <span class="hud-node-val" id="hudVal1">R² = 0.930</span>
+            </div>
+            <div class="hud-stream-item coral">
+              <span class="hud-node-name">Cluster Telemetry Stream</span>
+              <span class="hud-node-val" id="hudVal2">SIL = 0.416</span>
+            </div>
+            <div class="hud-stream-item teal">
+              <span class="hud-node-name">Connected Constellation</span>
+              <span class="hud-node-val" id="hudPacketRate">52 Nodes Synced</span>
+            </div>
+          </div>
+          <div class="hud-footer-hint">
+            <i class="fa-solid fa-diagram-project" style="color: #38BDF8;"></i>
+            <span>Move cursor across the sky to connect with the slow-drifting star mesh</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         LOWER PART: YOUR EXACT ORIGINAL WEBSITE DESIGN & ORIGINAL ARTWORK
+         ===================================================================== -->
+    <section class="proof">
+      <div class="wrap proof-row">
+        <div class="proof-item">
+          <strong>Predictive modeling</strong>
+          <span>Concrete strength · R² 0.93</span>
+        </div>
+        <div class="proof-item">
+          <strong>Unsupervised learning</strong>
+          <span>Automobile clusters · silhouette 0.416</span>
+        </div>
+        <div class="proof-item">
+          <strong>Healthcare operations</strong>
+          <span>Staffing workflow application</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK SECTION (#work) WITH YOUR ORIGINAL PROJECT IMAGES -->
+    <section class="block projects" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-label">SELECTED WORK</div>
+            <h2>Proof in the projects.</h2>
+          </div>
+          <p>Real case studies that show the question, the method, and what the analysis found.</p>
+        </div>
+
+        <div class="cards">
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="card-visual concrete">
+              <span class="visual-label">Predictive modeling</span>
+              <img class="project-artwork" src="https://mbimira.github.io/images/predictive-model.jpg" alt="Abstract network of connected data points">
+            </div>
+            <div class="card-body">
+              <div class="tag">DATA SCIENCE · PYTHON</div>
+              <h3>Predicting concrete strength</h3>
+              <div class="metric">R² 0.93 <small>HELD-OUT UCI DATA</small></div>
+              <p>A tuned neural network estimates compressive strength from concrete mix proportions and curing age.</p>
+              <a href="https://mbimira.github.io/projects/concrete-strength/index.html" target="_blank" rel="noreferrer">Read the case study <span>→</span></a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="card-visual auto">
+              <span class="visual-label">Pattern discovery</span>
+              <img class="project-artwork" src="https://mbimira.github.io/images/pattern-discovery.png" alt="Keyword network showing related pattern discovery terms">
+            </div>
+            <div class="card-body">
+              <div class="tag">MACHINE LEARNING · PYTHON</div>
+              <h3>Finding groups in automobile data</h3>
+              <div class="metric">0.416 <small>SILHOUETTE SCORE · 3 CLUSTERS</small></div>
+              <p>Hierarchical clustering and PCA reveal meaningful groupings across 32 vehicle models.</p>
+              <a href="https://mbimira.github.io/projects/automobile-clustering/index.html" target="_blank" rel="noreferrer">Read the case study <span>→</span></a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="card-visual">
+              <span class="visual-label">Applied software</span>
+              <img class="project-artwork" src="https://mbimira.github.io/images/applied-software.webp" alt="Bar chart comparing city figures from seven locations">
+            </div>
+            <div class="card-body">
+              <div class="tag">FULL STACK · HEALTHCARE</div>
+              <h3>Hospital staffing workflow</h3>
+              <p>A staffing application built to route shift schedules into a centralized database and support day-to-day operations.</p>
+              <a href="mailto:mikebimira@gmail.com?subject=Hospital%20staffing%20app" class="js-contact-open">Ask about this project <span>→</span></a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card">
+            <div class="card-visual">
+              <span class="visual-label">AI-assisted web design</span>
+              <img class="project-artwork" src="https://mbimira.github.io/images/portfolio-site.svg" alt="Illustration of the Michael Bimira portfolio website">
+            </div>
+            <div class="card-body">
+              <div class="tag">WEB DESIGN · AI COLLABORATION</div>
+              <h3>Building my own portfolio</h3>
+              <p>I designed and built this portfolio with AI as a development partner, refining the layout, content, and features to present my analytics work. It includes responsive project showcases, a light/dark theme, and an n8n-powered contact form.</p>
+              <a href="https://mbimira.github.io/" target="_blank" rel="noreferrer">View the live website <span>↗</span></a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="card">
+            <div class="card-visual">
+              <span class="visual-label">Landing page A/B test</span>
+              <img class="project-artwork" src="https://mbimira.github.io/images/ab-test-conversion.svg" alt="Conversion rates: control 12.04%, treatment 11.88%; no significant difference">
+            </div>
+            <div class="card-body">
+              <div class="tag">EXPERIMENTATION · PYTHON · EDUCATIONAL DATA</div>
+              <h3>Did the new page change conversion?</h3>
+              <div class="metric">-0.16 pp <small>TREATMENT VS. CONTROL · P = 0.190</small></div>
+              <p>Using Udacity's educational dataset, I removed group/page mismatches and compared one outcome per user. The result showed no statistically significant conversion difference.</p>
+              <a href="https://github.com/mbimira/A-B-TESTING" target="_blank" rel="noreferrer">View the analysis and method <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION (#about) -->
+    <section class="block" id="about">
+      <div class="wrap about-grid">
+        <div>
+          <div class="section-label">ABOUT ME</div>
+          <h2>Data Analytics, Applied AI &amp; Workflow Orchestration</h2>
+        </div>
+        <div>
+          <p>I am a Data Analyst and Applied AI Generalist who bridges the gap between raw operational data and intelligent, automated systems. With a strong foundation in SQL, Python, Tableau, and Power BI—complemented by hands-on experience in complex healthcare environments—I specialize in transforming intricate datasets into clear, actionable business insights and high-impact dashboards.</p>
+          <p>Beyond traditional analytics, my training in Artificial Intelligence in Business from Arizona State University and workflow orchestration allows me to design modern, tech-forward solutions that automate workflows, streamline data pipelines, and drive smarter decision-making. Whether building interactive visual reports or architecting intelligent systems, I focus on turning complex data challenges into seamless, efficient operations.</p>
+          <div class="skills">
+            <span>Python</span>
+            <span>SQL</span>
+            <span>Machine learning</span>
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Tableau</span>
+            <span>Power BI</span>
+            <span>Agentic AI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORIGINAL GET IN TOUCH SECTION (#contact) -->
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner">
+        <div>
+          <div class="section-label">GET IN TOUCH</div>
+          <h2>Let's make data useful.</h2>
+          <p>Open to conversations about analytics, applied AI, and healthcare operations.</p>
+        </div>
+        <div class="contact-links">
+          <a class="button js-contact-open" href="mailto:mikebimira@gmail.com">mikebimira@gmail.com&nbsp;↗</a>
+          <a class="social-link linkedin" href="https://linkedin.com/in/michael-bimira-77779a372" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </a>
+          <a class="social-link github" href="https://github.com/mbimira" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================================================================
+       REDESIGNED EXECUTIVE RESUME VIEW (PULLED FROM LATEST 2026 DRIVE RESUME)
+       ======================================================================= -->
+  <section class="resume-view-section" id="resumeViewSection" aria-label="Michael Bimira Resume">
+    <div class="resume-toolbar">
+      <button type="button" class="resume-back-btn" id="backToPortfolioBtn">
+        <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+      </button>
+      <div class="resume-toolbar-actions">
+        <button type="button" class="resume-action-btn outline" id="printResumeBtn">
+          <i class="fa-solid fa-print"></i> Print / Save as PDF
+        </button>
+        <a href="mailto:bimiram@gmail.com" class="resume-action-btn js-contact-open">
+          <i class="fa-regular fa-envelope"></i> Contact Michael
+        </a>
+      </div>
+    </div>
+
+    <div class="resume-sheet">
+      <!-- Top Executive Resume Banner -->
+      <div class="resume-banner">
+        <div>
+          <h1 class="resume-name">MICHAEL BIMIRA</h1>
+          <div class="resume-role-title">Data Analyst · Business Data Analyst · Junior Data Scientist</div>
+          <div class="resume-contact-strip">
+            <span><i class="fa-solid fa-location-dot" style="color: #38BDF8;"></i> Phoenix, AZ 85339</span>
+            <a href="tel:2074829066"><i class="fa-solid fa-phone" style="color: #2DD4BF;"></i> (207) 482-9066</a>
+            <a href="mailto:bimiram@gmail.com"><i class="fa-regular fa-envelope" style="color: #F97316;"></i> bimiram@gmail.com</a>
+            <a href="https://www.linkedin.com/in/michael-bimira-77779a372" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin" style="color: #38BDF8;"></i> linkedin.com/in/michael-bimira-77779a372</a>
+            <a href="https://public.tableau.com/app/profile/michael.b6319" target="_blank" rel="noreferrer"><i class="fa-solid fa-chart-pie" style="color: #2DD4BF;"></i> Tableau Public Portfolio</a>
+            <a href="https://mbimira.github.io/" target="_blank" rel="noreferrer"><i class="fa-solid fa-globe" style="color: #F97316;"></i> mbimira.github.io</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two-Column Executive Resume Body -->
+      <div class="resume-body-grid">
+        <!-- Main Left Column -->
+        <div class="resume-main-col">
+          <!-- Profile Summary -->
+          <div class="res-section">
+            <div class="res-sec-title"><i class="fa-solid fa-user-check"></i> Profile Summary</div>
+            <p class="res-summary-text">
+              Analytical and detail-oriented Data Analyst with experience transforming complex datasets into actionable business insights using SQL, Python, Tableau, Power BI, and Excel. Combines hands-on healthcare operations experience with strong analytical, reporting, and data visualization capabilities to support evidence-based decision-making. Skilled in data collection, cleaning, exploratory data analysis (EDA), dashboard development, KPI reporting, and process improvement. Recognized for learning new technologies quickly, collaborating effectively across multidisciplinary teams, and communicating technical findings to both technical and non-technical stakeholders.
+            </p>
+          </div>
+
+          <!-- Data Analytics Projects -->
+          <div class="res-section">
+            <div class="res-sec-title"><i class="fa-solid fa-chart-line"></i> Data Analytics &amp; ML Projects</div>
+            <div class="res-proj-grid">
+              <div class="res-proj-card">
+                <h4>Business Intelligence Dashboards</h4>
+                <ul>
+                  <li>Designed interactive Tableau dashboards to visualize business and operational performance.</li>
+                  <li>Created KPI reports enabling efficient trend monitoring and decision support.</li>
+                  <li>Applied data visualization best practices to improve stakeholder understanding.</li>
+                </ul>
+              </div>
+              <div class="res-proj-card">
+                <h4>SQL Data Analysis</h4>
+                <ul>
+                  <li>Queried relational databases using SQL to extract, clean, and analyze datasets.</li>
+                  <li>Performed joins, aggregations, filtering, and data transformation for reporting.</li>
+                </ul>
+              </div>
+              <div class="res-proj-card">
+                <h4>Python Analytics &amp; ML</h4>
+                <ul>
+                  <li>Utilized Python for data cleaning, manipulation, and exploratory data analysis (EDA).</li>
+                  <li>Applied Pandas, NumPy, Scikit-Learn, and Matplotlib for predictive modeling (Concrete Strength R² 0.93, Vehicle PCA Clustering).</li>
+                </ul>
+              </div>
+              <div class="res-proj-card">
+                <h4>Power BI &amp; Experimentation</h4>
+                <ul>
+                  <li>Developed interactive Power BI dashboards and automated operational reports.</li>
+                  <li>Conducted statistical A/B hypothesis testing on e-commerce conversion cohorts.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Experience -->
+          <div class="res-section">
+            <div class="res-sec-title"><i class="fa-solid fa-briefcase"></i> Professional Experience</div>
+
+            <div class="res-job">
+              <div class="res-job-head">
+                <span class="res-job-title">Behavioral Health Technician</span>
+                <span class="res-job-date">Oct 2023 – Present</span>
+              </div>
+              <div class="res-job-org">Arizona State Hospital · Phoenix, AZ</div>
+              <ul class="res-bullets">
+                <li>Collect, monitor, and document behavioral and operational data supporting clinical decision-making.</li>
+                <li>Produce accurate records used by interdisciplinary teams to evaluate treatment effectiveness.</li>
+                <li>Track patient progress and treatment compliance using standardized documentation procedures.</li>
+                <li>Identify behavioral trends and communicate findings through detailed written reports.</li>
+                <li>Maintain data accuracy while ensuring compliance with healthcare regulations and documentation standards.</li>
+                <li>Collaborate with physicians, nurses, and behavioral specialists to support evidence-based care.</li>
+              </ul>
+            </div>
+
+            <div class="res-job">
+              <div class="res-job-head">
+                <span class="res-job-title">Home Manager</span>
+                <span class="res-job-date">July 2005 – July 2011</span>
+              </div>
+              <div class="res-job-org">Serenity Residential Health Care Facility · Portland, ME</div>
+              <ul class="res-bullets">
+                <li>Managed resident documentation and maintained accurate operational records.</li>
+                <li>Monitored resident progress and communicated updates with multidisciplinary teams.</li>
+                <li>Coordinated daily operations while ensuring compliance with organizational procedures.</li>
+                <li>Prepared reports supporting resident care planning and program effectiveness.</li>
+                <li>Supervised daily activities while maintaining high standards of documentation accuracy and improving staff-management communication workflows.</li>
+              </ul>
+            </div>
+
+            <div class="res-job">
+              <div class="res-job-head">
+                <span class="res-job-title">Direct Support Professional</span>
+                <span class="res-job-date">Feb 2006 – Apr 2009</span>
+              </div>
+              <div class="res-job-org">Creative Work Systems · Scarborough, ME</div>
+              <ul class="res-bullets">
+                <li>Collected and documented client health, behavioral, and activity information accurately.</li>
+                <li>Maintained organized records supporting physician-directed care plans and quality standards.</li>
+                <li>Identified behavioral changes and communicated findings to healthcare professionals.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Additional Professional Experience -->
+          <div class="res-section">
+            <div class="res-sec-title"><i class="fa-solid fa-clock-rotate-left"></i> Additional Experience</div>
+            <ul class="res-bullets">
+              <li><strong>CDL Class A Driver</strong> · Coca-Cola Southwest Beverages (Fort Worth, TX) · <em>Aug 2022 – Aug 2023</em></li>
+              <li><strong>Class A CDL Driver</strong> · Mwaro Express LLC (Euless, TX) · <em>May 2016 – July 2023</em></li>
+              <li><strong>Youth Leader</strong> · Impact Mission Church (Hurst, TX) · <em>Aug 2014 – Aug 2023</em></li>
+              <li><strong>Paratransit Operator</strong> · All Citizen Transportation (Dallas, TX) · <em>May 2014 – May 2016</em></li>
+              <li><strong>Paratransit Driver</strong> · MetroAccess / Challenger Transportation Inc. (Gaithersburg, MD) · <em>May 2011 – Mar 2014</em></li>
+              <li><strong>Youth Leader</strong> · Inkuru Nziza Church (Kensington, MD) · <em>Mar 2011 – Mar 2014</em></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Sidebar Column -->
+        <div class="resume-side-col">
+          <!-- Technical Skills -->
+          <div class="res-section">
+            <div class="res-sec-title"><i class="fa-solid fa-code"></i> Technical Skills</div>
+
+            <div class="res-skill-group">
+              <strong>Programming &amp; Querying</strong>
+              <div class="res-tag-cloud">
+                <span class="res-tag">SQL</span>
+                <span class="res-tag">Python</span>
+                <span class="res-tag">Pandas &amp; NumPy</span>
+                <span class="res-tag">Scikit-Learn</span>
+                <span class="res-tag">Matplotlib</span>
+              </div>
+            </div>
+
+            <div class="res-skill-group">
+              <strong>BI &amp; Visualization</strong>
+              <div class="res-tag-cloud">
+                <span class="res-tag">Tableau</span>
+                <span class="res-tag">Tableau Public</span>
+                <span class="res-tag">Power BI</span>
+                <span class="res-tag">Microsoft Excel</span>
+              </div>
+            </div>
+
+            <div class="res-skill-group">
+              <strong>Analytics &amp; Methods</strong>
+              <div class="res-tag-cloud">
+                <span class="res-tag">Exploratory Data Analysis (EDA)</span>
+                <span class="res-tag">Data Cleaning</span>
+                <span class="res-tag">Data Validation</span>
+                <span class="res-tag">Statistical Analysis</span>
+                <span class="res-tag">KPI Reporting</span>
+                <span class="res-tag">Trend Analysis</span>
+                <span class="res-tag">Data Storytelling</span>
+                <span class="res-tag">Reporting Automation</span>
+                <span class="res-tag">Agile Fundamentals</span>
+              </div>
+            </div>
+
+            <div class="res-skill-group">
+              <strong>AI &amp; Platforms</strong>
+              <div class="res-tag-cloud">
+                <span class="res-tag">AI in Business</span>
+                <span class="res-tag">AI Orchestration</span>
+                <span class="res-tag">Machine Learning</span>
+                <span class="res-tag">Google Workspace</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Competencies -->
+          <div class="res-section">
+            <div class="res-sec-title"><i class="fa-solid fa-layer-group"></i> Skills Highlights</div>
+            <div class="res-tag-cloud">
+              <span class="res-tag">Data Quality Management</span>
+              <span class="res-tag">Process Improvement</span>
+              <span class="res-tag">Predictive Analytics</span>
+              <span class="res-tag">Business Reporting</span>
+              <span class="res-tag">Stakeholder Collaboration</span>
+              <span class="res-tag">Requirements Analysis</span>
+              <span class="res-tag">Cross-Functional Communication</span>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="res-section">
+            <div class="res-sec-title"><i class="fa-solid fa-graduation-cap"></i> Education</div>
+
+            <div class="res-edu-item">
+              <div class="res-edu-degree">W. P. Carey Certificate in Artificial Intelligence in Business (AIB)</div>
+              <div class="res-edu-school">Arizona State University</div>
+              <div class="res-edu-meta">May 2026 · Machine Learning in Business, Programming for AI &amp; Data Analytics, AI in Business</div>
+            </div>
+
+            <div class="res-edu-item">
+              <div class="res-edu-degree">A Leader’s Toolkit: Data Analytics and Visualization</div>
+              <div class="res-edu-school">Professional Leadership Coursework</div>
+              <div class="res-edu-meta">In Progress</div>
+            </div>
+
+            <div class="res-edu-item">
+              <div class="res-edu-degree">Bachelor of Economics and Management Sciences</div>
+              <div class="res-edu-school">Institut Supérieur de Commerce de Bukavu</div>
+            </div>
+
+            <div class="res-edu-item">
+              <div class="res-edu-degree">High School Diploma</div>
+              <div class="res-edu-school">Essa Nyarugunga · Kigali, Rwanda</div>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="res-section">
+            <div class="res-sec-title"><i class="fa-solid fa-certificate"></i> Certifications</div>
+            <ul class="res-cert-list">
+              <li><i class="fa-solid fa-circle-check"></i> <span>W. P. Carey Certificate in Artificial Intelligence in Business (ASU)</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Outskill – AI Generalist &amp; AI Orchestrator Certificate</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Certified Google Workspace Champion</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span>Skill Arbitrage Certificate: Data Analysis, SQL, Tableau, Power BI, Python, BI, EDA &amp; Agile</span></li>
+            </ul>
+          </div>
+
+          <!-- Languages -->
+          <div class="res-section">
+            <div class="res-sec-title"><i class="fa-solid fa-language"></i> Languages</div>
+            <div class="res-tag-cloud">
+              <span class="res-tag">English</span>
+              <span class="res-tag">French</span>
+              <span class="res-tag">Swahili</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORIGINAL CONTACT DIALOG MODAL (#contact-dialog) -->
   <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title">
     <form id="contact-form">
       <div class="dialog-heading">
-        <div><div class="section-label">Get in touch</div><h2 id="contact-dialog-title">Send me a message</h2></div>
-        <button class="dialog-close" type="button" data-close-contact aria-label="Close contact form">×</button>
+        <div>
+          <div class="section-label">GET IN TOUCH</div>
+          <h2 id="contact-dialog-title">Send a message</h2>
+        </div>
+        <button type="button" class="dialog-close" id="closeContactX" aria-label="Close dialog">✕</button>
       </div>
-      <label>Name<input name="name" type="text" autocomplete="name" maxlength="100" required></label>
-      <label>Email<input name="email" type="email" autocomplete="email" maxlength="254" required></label>
-      <label>Message<textarea name="message" maxlength="3000" required></textarea></label>
-      <div class="contact-honeypot" aria-hidden="true"><label>Leave this field empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
-      <div class="dialog-actions"><button class="button fill" type="submit">Send message&nbsp; ↗</button><button class="button" type="button" data-close-contact>Cancel</button></div>
-      <p class="form-status" role="status" aria-live="polite"></p>
+      <label>Your name
+        <input type="text" name="name" required>
+      </label>
+      <label>Your email
+        <input type="email" name="email" required>
+      </label>
+      <label>Message
+        <textarea name="message" required rows="5"></textarea>
+      </label>
+      <div class="contact-honeypot" aria-hidden="true">
+        <label>Website
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </label>
+      </div>
+      <div class="dialog-actions">
+        <button type="submit" class="button fill" id="submitContactBtn">Send message</button>
+        <button type="button" class="button" id="cancelContactBtn">Cancel</button>
+      </div>
+      <div class="form-status" id="formStatus" aria-live="polite"></div>
     </form>
   </dialog>
-  </main>
-  <footer><div class="wrap footer-inner"><span>Michael Bimira · Data Analytics &amp; Applied AI</span><span>© 2026 Michael Bimira</span></div></footer>
+
+  <!-- ORIGINAL FOOTER -->
+  <footer>
+    <div class="wrap footer-inner">
+      <div>© Michael Bimira. Built with clear intent and clean code.</div>
+      <div class="footer-links">
+        <a href="#top" id="footerBackTop">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
   <script>
-    (()=>{const key='bimira-theme',button=document.getElementById('theme-toggle'),root=document.documentElement;function apply(theme){root.dataset.theme=theme;button.innerHTML=theme==='dark'?'☼ <span>Light</span>':'☾ <span>Dark</span>';button.setAttribute('aria-label',`Switch to ${theme==='dark'?'light':'dark'} theme`);button.title=`Switch to ${theme==='dark'?'light':'dark'} theme`}let saved;try{saved=localStorage.getItem(key)}catch{}apply(saved==='dark'?'dark':'light');button.addEventListener('click',()=>{const theme=root.dataset.theme==='dark'?'light':'dark';apply(theme);try{localStorage.setItem(key,theme)}catch{}})})();
+    // --- 1. Dark / Light Theme Switcher ---
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+    const htmlEl = document.documentElement;
+
+    themeToggleBtn.addEventListener('click', function() {
+      const currentTheme = htmlEl.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      htmlEl.setAttribute('data-theme', newTheme);
+      const isDark = newTheme === 'dark';
+      themeLabel.textContent = isDark ? 'Light' : 'Dark';
+      themeIcon.className = isDark ? 'fa-regular fa-sun' : 'fa-regular fa-moon';
+    });
+
+    // --- 2. Built-in Executive Resume View Toggle ---
+    const openResumeBtn = document.getElementById('openResumeBtn');
+    const navResumeTab = document.getElementById('navResumeTab');
+    const backToPortfolioBtn = document.getElementById('backToPortfolioBtn');
+    const brandHomeLink = document.getElementById('brandHomeLink');
+    const printResumeBtn = document.getElementById('printResumeBtn');
+
+    function showResumeView(e) {
+      if (e) e.preventDefault();
+      document.body.classList.add('showing-resume');
+      navResumeTab.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showPortfolioView() {
+      document.body.classList.remove('showing-resume');
+      navResumeTab.classList.remove('active');
+    }
+
+    openResumeBtn.addEventListener('click', showResumeView);
+    navResumeTab.addEventListener('click', showResumeView);
+    backToPortfolioBtn.addEventListener('click', function() {
+      showPortfolioView();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    brandHomeLink.addEventListener('click', function() {
+      showPortfolioView();
+    });
+
+    document.querySelectorAll('.js-portfolio-nav').forEach(function(link) {
+      link.addEventListener('click', function() {
+        showPortfolioView();
+      });
+    });
+
+    printResumeBtn.addEventListener('click', function() {
+      window.print();
+    });
+
+    // --- 3. Original Contact Dialog & n8n Form Submission ---
+    const contactDialog = document.getElementById('contact-dialog');
+    const contactForm = document.getElementById('contact-form');
+    const closeContactX = document.getElementById('closeContactX');
+    const cancelContactBtn = document.getElementById('cancelContactBtn');
+    const formStatus = document.getElementById('formStatus');
+    const submitContactBtn = document.getElementById('submitContactBtn');
+
+    function openContactDialog(e) {
+      if (contactDialog && typeof contactDialog.showModal === 'function') {
+        e.preventDefault();
+        formStatus.textContent = '';
+        formStatus.removeAttribute('data-state');
+        contactDialog.showModal();
+      }
+    }
+
+    function closeContactDialog() {
+      if (contactDialog && contactDialog.open) {
+        contactDialog.close();
+      }
+    }
+
+    document.querySelectorAll('.js-contact-open').forEach(function(el) {
+      el.addEventListener('click', openContactDialog);
+    });
+
+    closeContactX.addEventListener('click', closeContactDialog);
+    cancelContactBtn.addEventListener('click', closeContactDialog);
+
+    contactDialog.addEventListener('click', function(e) {
+      const rect = contactDialog.getBoundingClientRect();
+      const clickedInDialog = (
+        rect.top <= e.clientY &&
+        e.clientY <= rect.top + rect.height &&
+        rect.left <= e.clientX &&
+        e.clientX <= rect.left + rect.width
+      );
+      if (!clickedInDialog) {
+        closeContactDialog();
+      }
+    });
+
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(contactForm);
+      if (formData.get('website')) return;
+
+      submitContactBtn.disabled = true;
+      formStatus.textContent = 'Sending message...';
+      formStatus.removeAttribute('data-state');
+
+      try {
+        const params = new URLSearchParams();
+        params.append('name', formData.get('name') || '');
+        params.append('email', formData.get('email') || '');
+        params.append('message', formData.get('message') || '');
+        params.append('website', formData.get('website') || '');
+        params.append('source', window.location.href);
+
+        await fetch('https://mikebimira.app.n8n.cloud/webhook/42c04181-f716-43b6-857e-38d56b0d9124', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: params.toString()
+        });
+
+        formStatus.setAttribute('data-state', 'success');
+        formStatus.textContent = 'Thank you! Your message has been sent.';
+        contactForm.reset();
+        setTimeout(closeContactDialog, 1600);
+      } catch (err) {
+        formStatus.setAttribute('data-state', 'error');
+        formStatus.textContent = 'Could not send right now. Please email mikebimira@gmail.com directly.';
+      } finally {
+        submitContactBtn.disabled = false;
+      }
+    });
+
+    // --- 4. Hero Canvas: ONLY Slow-Moving Connected Stars & City Rooftop Hubs (Zero Fast Shooting Stars) ---
+    const canvas = document.getElementById('cityDataCanvas');
+    const ctx = canvas.getContext('2d');
+    const heroSection = document.getElementById('heroSection');
+
+    let width = 0;
+    let height = 0;
+    let buildings = [];
+    let cityHubs = [];
+    let skyNodes = [];
+    let mouse = { x: -1000, y: -1000, active: false };
+
+    const COLORS = ['#38BDF8', '#2DD4BF', '#F97316', '#A855F7', '#60A5FA'];
+
+    function initScene() {
+      const rect = heroSection.getBoundingClientRect();
+      width = canvas.width = rect.width || window.innerWidth;
+      height = canvas.height = rect.height || 620;
+
+      buildings = [];
+      cityHubs = [];
+      skyNodes = [];
+
+      const horizonY = height * 0.86;
+      let curX = 0;
+      while (curX < width) {
+        const bWidth = 26 + Math.random() * 52;
+        const bHeight = 45 + Math.random() * (height * 0.34);
+        const topY = horizonY - bHeight;
+        const hasSpire = Math.random() > 0.55;
+
+        const windows = [];
+        const cols = Math.max(2, Math.floor((bWidth - 10) / 9));
+        const rows = Math.max(3, Math.floor((bHeight - 16) / 12));
+        for (let r = 0; r < rows; r++) {
+          for (let c = 0; c < cols; c++) {
+            if (Math.random() > 0.42) {
+              windows.push({
+                rx: 6 + c * 9,
+                ry: 10 + r * 12,
+                color: Math.random() > 0.82 ? '#38BDF8' : (Math.random() > 0.88 ? '#F97316' : 'rgba(226, 232, 240, 0.35)')
+              });
+            }
+          }
+        }
+
+        buildings.push({
+          x: curX,
+          y: topY,
+          w: bWidth,
+          h: bHeight,
+          hasSpire,
+          windows
+        });
+
+        if (Math.random() > 0.22) {
+          const hubX = curX + bWidth * 0.5;
+          const hubY = hasSpire ? topY - 14 : topY;
+          cityHubs.push({
+            x: hubX,
+            y: hubY,
+            color: COLORS[Math.floor(Math.random() * COLORS.length)],
+            pulse: Math.random() * Math.PI * 2
+          });
+        }
+
+        curX += bWidth - 4;
+      }
+
+      // Slow-moving constellation stars across the sky that connect to each other and to city hubs
+      const skyCount = Math.min(64, Math.max(36, Math.floor(width / 20)));
+      for (let i = 0; i < skyCount; i++) {
+        skyNodes.push({
+          x: Math.random() * width,
+          y: 24 + Math.random() * (horizonY - 45),
+          vx: (Math.random() - 0.5) * 0.28, // Gentle, slow-moving drift
+          vy: (Math.random() - 0.5) * 0.22,
+          r: 1.8 + Math.random() * 2.2,
+          pulse: Math.random() * Math.PI * 2,
+          color: COLORS[Math.floor(Math.random() * COLORS.length)]
+        });
+      }
+    }
+
+    function drawScene() {
+      ctx.clearRect(0, 0, width, height);
+
+      const horizonY = height * 0.86;
+
+      // 1. Draw City Skyline Silhouette & Glowing Windows first so constellation lines layer cleanly
+      for (const b of buildings) {
+        ctx.fillStyle = 'rgba(7, 17, 30, 0.92)';
+        ctx.strokeStyle = 'rgba(56, 189, 248, 0.16)';
+        ctx.lineWidth = 1;
+        ctx.fillRect(b.x, b.y, b.w, b.h);
+        ctx.strokeRect(b.x, b.y, b.w, b.h);
+
+        if (b.hasSpire) {
+          const midX = b.x + b.w * 0.5;
+          ctx.strokeStyle = 'rgba(56, 189, 248, 0.45)';
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.moveTo(midX, b.y);
+          ctx.lineTo(midX, b.y - 14);
+          ctx.stroke();
+        }
+
+        for (const w of b.windows) {
+          ctx.fillStyle = w.color;
+          ctx.fillRect(b.x + w.rx, b.y + w.ry, 4, 6);
+        }
+      }
+
+      // 2. Update & Draw Slow-Moving Connected Stars in the Sky
+      for (let i = 0; i < skyNodes.length; i++) {
+        const n = skyNodes[i];
+        n.x += n.vx;
+        n.y += n.vy;
+        n.pulse += 0.025;
+
+        if (n.x < 10 || n.x > width - 10) n.vx *= -1;
+        if (n.y < 15 || n.y > horizonY - 30) n.vy *= -1;
+
+        // Connect slow-moving stars to each other
+        for (let j = i + 1; j < skyNodes.length; j++) {
+          const m = skyNodes[j];
+          const d = Math.hypot(n.x - m.x, n.y - m.y);
+          if (d < 145) {
+            ctx.strokeStyle = `rgba(56, 189, 248, ${(1 - d / 145) * 0.32})`;
+            ctx.lineWidth = 1.1;
+            ctx.beginPath();
+            ctx.moveTo(n.x, n.y);
+            ctx.lineTo(m.x, m.y);
+            ctx.stroke();
+          }
+        }
+
+        // Connect low-altitude slow-moving stars directly to nearby city rooftop hubs
+        for (let k = 0; k < cityHubs.length; k++) {
+          const h = cityHubs[k];
+          const dh = Math.hypot(n.x - h.x, n.y - h.y);
+          if (dh < 135) {
+            ctx.strokeStyle = `rgba(45, 212, 191, ${(1 - dh / 135) * 0.28})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(n.x, n.y);
+            ctx.lineTo(h.x, h.y);
+            ctx.stroke();
+          }
+        }
+
+        // Interactive cursor connections
+        if (mouse.active) {
+          const dm = Math.hypot(n.x - mouse.x, n.y - mouse.y);
+          if (dm < 175) {
+            ctx.strokeStyle = `rgba(45, 212, 191, ${(1 - dm / 175) * 0.6})`;
+            ctx.lineWidth = 1.3;
+            ctx.beginPath();
+            ctx.moveTo(n.x, n.y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.stroke();
+          }
+        }
+
+        // Draw glowing star node
+        const starR = n.r + Math.sin(n.pulse) * 0.5;
+        ctx.fillStyle = n.color;
+        ctx.shadowColor = n.color;
+        ctx.shadowBlur = 8;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, starR, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+
+      // 3. Draw Faint Network Mesh Connecting Adjacent City Rooftop Hubs
+      for (let i = 0; i < cityHubs.length; i++) {
+        const h1 = cityHubs[i];
+        h1.pulse += 0.03;
+
+        for (let j = i + 1; j < Math.min(cityHubs.length, i + 4); j++) {
+          const h2 = cityHubs[j];
+          ctx.strokeStyle = 'rgba(56, 189, 248, 0.16)';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(h1.x, h1.y);
+          ctx.lineTo(h2.x, h2.y);
+          ctx.stroke();
+        }
+
+        const glowRadius = 3.2 + Math.sin(h1.pulse) * 1.0;
+        ctx.fillStyle = h1.color;
+        ctx.shadowColor = h1.color;
+        ctx.shadowBlur = 10;
+        ctx.beginPath();
+        ctx.arc(h1.x, h1.y, glowRadius, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+
+      // 4. Bottom Mirror Reflection Horizon
+      const grad = ctx.createLinearGradient(0, horizonY, 0, height);
+      grad.addColorStop(0, 'rgba(6, 182, 212, 0.22)');
+      grad.addColorStop(0.25, 'rgba(13, 110, 110, 0.12)');
+      grad.addColorStop(1, 'rgba(3, 9, 17, 0.95)');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, horizonY, width, height - horizonY);
+
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.45)';
+      ctx.lineWidth = 1.2;
+      ctx.beginPath();
+      ctx.moveTo(0, horizonY);
+      ctx.lineTo(width, horizonY);
+      ctx.stroke();
+
+      for (const h of cityHubs) {
+        const reflLen = 16 + Math.sin(h.pulse) * 6;
+        ctx.strokeStyle = h.color;
+        ctx.globalAlpha = 0.22;
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(h.x, horizonY + 2);
+        ctx.lineTo(h.x, horizonY + reflLen);
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+
+      requestAnimationFrame(drawScene);
+    }
+
+    heroSection.addEventListener('mousemove', function(e) {
+      const rect = heroSection.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+      mouse.active = true;
+    });
+
+    heroSection.addEventListener('mouseleave', function() {
+      mouse.active = false;
+    });
+
+    window.addEventListener('resize', initScene);
+    window.addEventListener('load', function() {
+      initScene();
+      drawScene();
+    });
   </script>
-  <script src="js/n8n-contact.js"></script>
 </body>
 </html>
