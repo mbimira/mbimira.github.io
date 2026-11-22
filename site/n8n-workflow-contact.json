@@ -1,0 +1,166 @@
+{
+  "name": "Contact Form Intake Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "contact-intake",
+        "responseMode": "onReceived",
+        "responseData": "entry"
+      },
+      "id": "webhook-trigger",
+      "name": "Contact Form Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [250, 300],
+      "webhookId": "contact-intake-agent"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json[\"website\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combinator": "and"
+      },
+      "id": "spam-filter",
+      "name": "Spam Filter (Honeypot)",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "to": "={{ $json[\"email\"] }}",
+        "subject": "Thanks for reaching out — Michael Bimira",
+        "text": "Hi {{ $json[\"name\"] }},\n\nThanks for your message. I’ve received it and will get back to you shortly.\n\n— Michael Bimira\nData Analytics & Applied AI\nmikebimira@gmail.com\nlinkedin.com/in/michael-bimira-77779a372\n",
+        "html": "<p>Hi {{ $json[\"name\"] }},</p><p>Thanks for your message. I’ve received it and will get back to you shortly.</p><p>— Michael Bimira<br/>Data Analytics & Applied AI<br/>mikebimira@gmail.com<br/>linkedin.com/in/michael-bimira-77779a372</p>",
+        "options": {}
+      },
+      "id": "confirmation-email",
+      "name": "Send Confirmation Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [750, 200]
+    },
+    {
+      "parameters": {
+        "to": "mikebimira@gmail.com",
+        "subject": "New portfolio contact: {{ $json[\"name\"] }}",
+        "text": "New contact form submission from your portfolio:\n\nName: {{ $json[\"name\"] }}\nEmail: {{ $json[\"email\"] }}\nMessage: {{ $json[\"message\"] }}\nSource: {{ $json[\"source\"] }}\nSubmitted: {{ $now.format(\"YYYY-MM-DD HH:mm:ss\") }}\n",
+        "html": "<h3>New contact form submission</h3><p><strong>Name:</strong> {{ $json[\"name\"] }}</p><p><strong>Email:</strong> {{ $json[\"email\"] }}</p><p><strong>Message:</strong><br/>{{ $json[\"message\"] }}</p><p><strong>Source:</strong> {{ $json[\"source\"] }}</p><p><strong>Submitted:</strong> {{ $now.format(\"YYYY-MM-DD HH:mm:ss\") }}</p>",
+        "options": {}
+      },
+      "id": "notify-mike",
+      "name": "Notify Mike (Email)",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [750, 400]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetName": "Contact Submissions",
+        "columns": [
+          {"name": "name", "value": "={{ $json[\"name\"] }}"},
+          {"name": "email", "value": "={{ $json[\"email\"] }}"},
+          {"name": "message", "value": "={{ $json[\"message\"] }}"},
+          {"name": "source", "value": "={{ $json[\"source\"] }}"},
+          {"name": "submitted_at", "value": "={{ $now.format(\"YYYY-MM-DD HH:mm:ss\") }}"}
+        ]
+      },
+      "id": "log-submission",
+      "name": "Log to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.2,
+      "position": [1000, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": {
+          "status": "success",
+          "message": "Thanks, your message has been sent."
+        },
+        "responseCode": 200
+      },
+      "id": "respond-success",
+      "name": "Respond Success",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [500, 500]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": {
+          "status": "ignored",
+          "message": "Spam detected"
+        },
+        "responseCode": 200
+      },
+      "id": "respond-spam",
+      "name": "Respond Spam",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [500, 700]
+    }
+  ],
+  "connections": {
+    "Contact Form Webhook": {
+      "main": [
+        [
+          {
+            "node": "Spam Filter (Honeypot)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spam Filter (Honeypot)": {
+      "main": [
+        [
+          {
+            "node": "Send Confirmation Email",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Notify Mike (Email)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Log to Google Sheets",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Respond Success",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Respond Spam",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "versionId": "contact-intake-agent-v1",
+  "meta": {
+    "instanceId": "local",
+    "templateCredsSetupCompleted": false
+  }
+}

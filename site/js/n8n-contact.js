@@ -1,5 +1,5 @@
 (() => {
-  const webhookUrl = 'https://mikebimira.app.n8n.cloud/webhook/42c04181-f71b-4763-8c10-879b760c61a3';
+  const webhookUrl = 'http://localhost:5678/webhook/contact-intake-agent';
   const dialog = document.getElementById('contact-dialog');
   const form = document.getElementById('contact-form');
 
