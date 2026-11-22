@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Case Study: Hospital staffing operations analysis — 1,890 shifts across 5 units, SQL + Python, 59.9% understaffed, 4,572 overtime hours.">
+  <title>Hospital Staffing Operations — Case Study</title>
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .project-nav { margin-bottom: 32px; }
+    .project-nav a { color: #2563eb; text-decoration: none; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .project-nav a:hover { color: #1d4ed8; }
+    .project-nav .sep { color: #9ca3af; margin: 0 6px; }
+
+    .project-wrap { max-width: 980px; margin: 0 auto; padding: 48px 32px; }
+    .project-head { margin-bottom: 48px; border-bottom: 1px solid #e5e7eb; padding-bottom: 24px; }
+    .project-head h1 { color: #1a1a2e; font-size: clamp(28px, 4vw, 40px); margin-bottom: 8px; letter-spacing: -0.5px; }
+    .project-head .status { color: #2563eb; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+
+    .section { margin-bottom: 64px; }
+    .section h2 { color: #1a1a2e; font-size: clamp(22px, 3vw, 28px); margin-bottom: 14px; padding-left: 12px; border-left: 3px solid #2563eb; }
+    .section p { color: #374151; font-size: clamp(13px, 1.4vw, 15px); line-height: 1.7; max-width: 72ch; margin-bottom: 10px; }
+    .section strong { color: #1a1a2e; }
+
+    .chart-panel { background: #ffffff; border: 1px solid #e5e7eb; padding: 24px; margin-bottom: 24px; display: flex; flex-direction: column; align-items: center; border-radius: 12px; }
+    .chart-panel img { max-width: 100%; height: auto; display: block; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; }
+    .chart-caption { color: #6b7280; font-size: 11px; margin-top: 12px; text-align: center; max-width: 600px; }
+
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin: 24px 0; }
+    .metric { background: #ffffff; border: 1px solid #e5e7eb; padding: 20px; text-align: center; border-radius: 12px; }
+    .metric .value { color: #2563eb; font-size: 28px; font-weight: bold; font-variant-numeric: tabular-nums; }
+    .metric .label { color: #6b7280; font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; margin-top: 6px; }
+
+    .data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+    .data-table th, .data-table td { border: 1px solid #e5e7eb; padding: 12px; text-align: left; }
+    .data-table th { background: #f8fafc; color: #1a1a2e; text-transform: uppercase; letter-spacing: 0.8px; font-size: 11px; font-weight: 700; }
+    .data-table td { color: #374151; }
+    .data-table tr:nth-child(even) td { background: #fafafa; }
+
+    .analysis-links { margin-top: 32px; }
+    .analysis-links a { color: #2563eb; text-decoration: none; border: 1px solid #2563eb; padding: 10px 18px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-right: 10px; margin-bottom: 10px; display: inline-block; font-weight: 600; }
+    .analysis-links a:hover { background: #2563eb; color: #ffffff; }
+
+    .back-link { color: #6b7280; font-size: 12px; text-decoration: none; margin-top: 48px; display: inline-block; }
+    .back-link:hover { color: #2563eb; }
+
+    .dataset-note { color: #6b7280; font-size: 12px; font-style: italic; margin-top: 16px; }
+    .sql-block { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #374151; overflow-x: auto; margin: 16px 0; }
+    .sql-block .kw { color: #1d4ed8; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <div class="project-nav">
+    <a href="../../index.html">&larr; back to portfolio</a>
+    <span class="sep">·</span>
+    <a href="staffing_shifts.csv">Download dataset (CSV)</a>
+    <span class="sep">·</span>
+    <a href="analysis.py">View analysis script</a>
+  </div>
+
+  <div class="project-wrap">
+    <div class="project-head">
+      <span class="status">case study 03 · complete</span>
+      <h1>Hospital staffing operations analysis</h1>
+    </div>
+
+    <div class="section">
+      <h2>Problem</h2>
+      <p>Hospital units regularly run short-staffed, forcing overtime, agency labor, and higher patient-to-staff ratios. The operations team needed to quantify where and when staffing gaps occur, which units are most affected, and what the labor cost impact is — so leadership can set staffing targets and budget for overtime and agency spend.</p>
+    </div>
+
+    <div class="section">
+      <h2>Data</h2>
+      <p>Synthetic shift-level dataset built to mirror real hospital staffing patterns: <strong>1,890 shifts</strong> across <strong>5 units</strong> (ICU, Med-Surg, ER, Stepdown, Oncology) over <strong>6 months</strong> (Jan–Jun 2025). Each row records scheduled vs. actual staff, patient census, overtime hours, agency staff usage, and labor cost.</p>
+      <p class="dataset-note">Synthetic data generated for demonstration. Column definitions and generation logic are in the linked analysis script; replace with real (de-identified) data for production use.</p>
+      <div class="chart-panel">
+        <img src="images/01_gap_by_unit.png" alt="Average staffing gap by unit">
+        <div class="chart-caption">Figure 1: Average staffing gap (scheduled − actual) by unit</div>
+      </div>
+      <div class="chart-panel">
+        <img src="images/02_patient_to_staff.png" alt="Patient-to-staff ratio by unit">
+        <div class="chart-caption">Figure 2: Average patient-to-staff ratio by unit</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Method</h2>
+      <p>Analysis performed in SQL (aggregation by unit, shift type, and month) and Python (gap calculation, patient-to-staff ratio, understaffed share). No modeling — this is descriptive operations analytics focused on variance between planned and actual staffing.</p>
+      <div class="sql-block">
+        <span class="kw">SELECT</span> unit,<br>
+        &nbsp;&nbsp;COUNT(*) AS shifts,<br>
+        &nbsp;&nbsp;ROUND(AVG(staff_scheduled - staff_actual), 2) AS avg_gap,<br>
+        &nbsp;&nbsp;ROUND(AVG(patients * 1.0 / NULLIF(staff_actual, 0)), 2) AS avg_patient_to_staff,<br>
+        &nbsp;&nbsp;SUM(overtime_hours) AS total_ot,<br>
+        &nbsp;&nbsp;SUM(agency_staff) AS agency_shifts,<br>
+        &nbsp;&nbsp;ROUND(SUM(labor_cost_usd), 0) AS total_cost<br>
+        <span class="kw">FROM</span> shifts<br>
+        <span class="kw">GROUP BY</span> unit<br>
+        <span class="kw">ORDER BY</span> total_cost DESC;
+      </div>
+      <p>Staffing gap = scheduled − actual. A shift is flagged "understaffed" when actual staff is below scheduled.</p>
+    </div>
+
+    <div class="section">
+      <h2>Result</h2>
+      <div class="metrics-grid">
+        <div class="metric">
+          <div class="value">59.9%</div>
+          <div class="label">shifts understaffed</div>
+        </div>
+        <div class="metric">
+          <div class="value">4,572 hrs</div>
+          <div class="label">total overtime</div>
+        </div>
+        <div class="metric">
+          <div class="value">305</div>
+          <div class="label">agency shifts</div>
+        </div>
+        <div class="metric">
+          <div class="value">$1.8M</div>
+          <div class="label">total labor cost</div>
+        </div>
+      </div>
+      <p>Across all units, <strong>59.9% of shifts ran understaffed</strong>, with an average gap of <strong>2.0 staff</strong> when short. Overtime totaled <strong>4,572 hours</strong> over six months, with <strong>305 shifts</strong> requiring agency staff. Total labor cost: <strong>$1.8M</strong>.</p>
+      <p><strong>ER had the highest patient-to-staff ratio (2.94)</strong> and the most agency shifts (78). <strong>ICU logged the most overtime (979 hrs)</strong>. Evening shifts carried the highest overtime load (1,572 hrs) and cost ($609,946).</p>
+      <div class="chart-panel">
+        <img src="images/03_overtime_by_month.png" alt="Overtime hours by month">
+        <div class="chart-caption">Figure 3: Overtime hours by month</div>
+      </div>
+      <div class="chart-panel">
+        <img src="images/04_understaffed_pct.png" alt="Understaffed share by unit">
+        <div class="chart-caption">Figure 4: Share of understaffed shifts by unit</div>
+      </div>
+      <div class="chart-panel">
+        <img src="images/05_cost_by_shift.png" alt="Labor cost by shift type">
+        <div class="chart-caption">Figure 5: Labor cost by shift type</div>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr><th>Unit</th><th>Shifts</th><th>Avg gap</th><th>Avg patient-to-staff</th><th>OT (hrs)</th><th>Agency</th><th>Labor cost</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Med-Surg</td><td>378</td><td>0.98</td><td>2.21</td><td>793</td><td>62</td><td>$397,623</td></tr>
+          <tr><td>ER</td><td>378</td><td>1.03</td><td>2.94</td><td>935</td><td>78</td><td>$389,577</td></tr>
+          <tr><td>ICU</td><td>378</td><td>1.06</td><td>0.94</td><td>979</td><td>64</td><td>$368,625</td></tr>
+          <tr><td>Stepdown</td><td>378</td><td>1.06</td><td>1.97</td><td>911</td><td>52</td><td>$339,149</td></tr>
+          <tr><td>Oncology</td><td>378</td><td>0.81</td><td>1.95</td><td>954</td><td>49</td><td>$320,470</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Recommendations</h2>
+      <ul style="color:#374151; line-height:1.7; max-width:72ch; padding-left: 20px;">
+        <li><strong>Prioritize ER staffing.</strong> Highest patient-to-staff ratio and most agency shifts — review baseline staffing and float-pool coverage.</li>
+        <li><strong>Cap ICU overtime.</strong> Highest OT hours suggest chronic under-scheduling; consider adding standing night-shift coverage.</li>
+        <li><strong>Target evening shifts.</strong> Highest overtime cost — evaluate shift differential or staggered start times to reduce OT dependency.</li>
+        <li><strong>Set unit-level staffing targets.</strong> Use the avg gap by unit as a baseline for scheduling rules and variance alerts.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Limitations</h2>
+      <p>This is a synthetic dataset generated to mirror staffing patterns, not real hospital data. Findings are directional and should be validated against actual scheduling and HR system data before operational decisions are made. Agency cost and OT rates are simplified estimates.</p>
+    </div>
+
+    <div class="analysis-links">
+      <a href="staffing_shifts.csv">Download dataset (CSV)</a>
+      <a href="analysis.py">View analysis script</a>
+    </div>
+
+    <p class="back-link"><a href="../../index.html">&larr; back to portfolio</a></p>
+  </div>
+
+</body>
+</html>
