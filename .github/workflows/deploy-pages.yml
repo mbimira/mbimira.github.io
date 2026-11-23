@@ -29,11 +29,9 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload website
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
           path: ./site
-          overwrite: true
 
       - name: Deploy website
         id: deployment
