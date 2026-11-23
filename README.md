@@ -36,6 +36,8 @@ Without the submodule, the website and its deployment still work.
 
 - [Concrete compressive strength](https://mbimira.github.io/projects/concrete-strength/) — regression modeling on the UCI concrete dataset.
 - [Automobile clustering](https://mbimira.github.io/projects/automobile-clustering/) — hierarchical clustering and PCA on `mtcars`.
+- [Hospital staffing operations](https://mbimira.github.io/projects/healthcare-operations/) — SQL + Python staffing analysis, 1,890 shifts, 5 units.
+- [Hospital staffing dashboard](https://mbimira.github.io/projects/healthcare-dashboard/) — Tableau/Power BI dashboard mockup, KPIs and filters.
 - [Landing page A/B test](https://github.com/mbimira/A-B-TESTING) — experiment analysis and methodology.
 
 ## Deployment
