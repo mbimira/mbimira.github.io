@@ -33,7 +33,14 @@ Short case studies per project (problem, data, method, result); live dashboards 
 
 ## Evidence on Hand
 
-No projects, dashboards, demo links, or case-study content exist yet — future work must not fabricate testimonials, metrics, customers, or benchmarks. The owner's background (data analytics, applied AI, SQL, Python, Tableau, Power BI) is source material to draw from, not content to publish as-is.
+Four published case studies back the capability claims:
+
+- **Concrete Strength** — predictive modeling on UCI dataset, R² 0.93, RMSE 4.565 (Python/ML)
+- **Automobile Clustering** — unsupervised learning on mtcars, silhouette 0.416 (Python/ML)
+- **Hospital Staffing Operations** — SQL + Python staffing analysis, 1,890 shifts across 5 units (simulated data)
+- **Hospital Staffing Dashboard** — Python-rendered dashboard mockup (matplotlib), KPI cards and filters
+
+Each case study has a dedicated page with problem, data, method, result, recommendations, and limitations sections, plus downloadable data and analysis code.
 
 ## Product Principles
 
